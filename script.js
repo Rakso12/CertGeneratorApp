@@ -1,5 +1,7 @@
+// to jsPDF library working
 window.jsPDF = window.jspdf.jsPDF;
 
+// make canvas with parameters
 function generateCertificate(img, text) {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
@@ -14,23 +16,26 @@ function generateCertificate(img, text) {
   ctx.font = "italic 160px Lato";
   ctx.textAlign = "center";
 
+  // choose good values of writing height for your certificate
   ctx.fillText(text, canvas.width / 2, canvas.height / 2 + 200, canvas.width);
 }
 
+// make certificate
 window.addEventListener("DOMContentLoaded", async () => {
   const imageInput = document.getElementById("image-input");
-  const generateBtn = document.getElementById("generate-btn");
   const inputXlsx = document.getElementById("excel-input");
+  const generateBtn = document.getElementById("generate-btn");
 
   let person = [];
-
   let index = -1;
 
+  // make list of person from .xlsx file
   inputXlsx.addEventListener("change", async () => {
     const json = await readXlsxFile(inputXlsx.files[0]);
     person = json.map(([firstName, lastName]) => `${firstName} ${lastName}`);
   });
 
+  // generate one certificate after click
   generateBtn.addEventListener("click", () => {
     if (++index >= person.length) {
       return;

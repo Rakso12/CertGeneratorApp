@@ -2,21 +2,43 @@
 <html>
     <head>
         <title> Certificate PDF Generator </title>
+
+        <link rel="stylesheet" href="/style.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
         <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
     </head>
     <body>
-        <input type='text' id="text">
-        <br>
-        <input type="file" id="image-input" accept="image/*">
-        <br>
-        <input type="file" id="excel-input">
-        <br>
-        <button id="generate-btn">Create</button>
+        <div class="form text-style">
+            <h1> Certificate PDF generator </h1> <p>by Murphy</p>
+            
+            <div class="form-content">
+                <p>
+                    <label> Upload your certificate image. </label>
+                
+                    <label for="image-input" class="file-upload">
+                        <i class="fa fa-cloud-upload"></i> Image Upload
+                    </label>
+                
+                    <input type="file" id="image-input" accept="image/*">
+                </p>
+                <p>
+                    <label> Upload xlsx file with your course participant. </label>
+                
+                    <label for="excel-input" class="file-upload">
+                        <i class="fa fa-cloud-upload"></i> Data Upload
+                    </label>
+                
+                    <input type="file" id="excel-input" class="file-upload">
+                </p>
+            </div>
 
-        <canvas id="canvas" title="Right click to save this Certificate"></canvas>
+            <button id="generate-btn">Create !</button>
+        </div>
+        
+        <canvas id="canvas"></canvas>
 
         <script src="script.js"></script>
-        <script src="parser.js"></script>
+
     </body>
 </html>
