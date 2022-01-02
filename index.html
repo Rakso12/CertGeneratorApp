@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Certificate PDF Generator </title>
+        <title> Certificate Generator </title>
 
         <link rel="stylesheet" href="/style.css">
 
@@ -9,31 +9,60 @@
         <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
     </head>
     <body>
-        <div class="form text-style">
-            <h1> Certificate PDF generator </h1> <p>by Murphy</p>
+
+        <div class="navbar">
+            <div class="navlogo">
+                <a href="index.html">
+                    <img class="logo" src="img/logo.svg">
+                </a>
+            </div>
+
+            <a href="https://github.com/Rakso12/CertGeneratorApp">
+                <div class="navcontent">
+                    <img class="logo" src="img/gh.png">
+                </div>
+            </a>
+
+            <a href="https://github.com/Rakso12/CertGeneratorApp/blob/main/README.md">
+                <div class="navcontent">
+                    About app 
+                </div>
+            </a>
+
+            <a href="index.html"> 
+                <div class="navcontent">
+                    Certificate generator 
+                </div>
+            </a>
+        </div>
+
+        <div class="form text-style ">
+            <h1> Certificate generator </h1> <p>by <a href="https://github.com/Rakso12">Rakso12</a></p>
             
-            <div class="form-content">
+            <div class="top-margin">
                 <p>
-                    <label> Upload your certificate image. </label>
+                    <label> Upload an image of your certificate </label>
                 
-                    <label for="image-input" class="file-upload">
-                        <i class="fa fa-cloud-upload"></i> Image Upload
+                    <label for="image-input" class="btn-5 btn-margin">
+                        <i class="fa fa-cloud-upload"></i> Image upload
                     </label>
                 
                     <input type="file" id="image-input" accept="image/*">
                 </p>
                 <p>
-                    <label> Upload xlsx file with your course participant. </label>
+                    <label> Upload an xlsx file with a list of course participants </label>
                 
-                    <label for="excel-input" class="file-upload">
-                        <i class="fa fa-cloud-upload"></i> Data Upload
+                    <label for="excel-input" class="btn-5 btn-margin">
+                        <i class="fa fa-cloud-upload"></i> List upload
                     </label>
                 
-                    <input type="file" id="excel-input" class="file-upload">
+                    <input type="file" id="excel-input" accept="application/vnd.ms-excel">
                 </p>
             </div>
 
-            <button id="generate-btn">Create !</button>
+            <button id="generate-btn" class="btn-5 text-style top-margin">* Create !</button>
+            <label class="small-top-margin"> * One click generates one certificate </label>
+
         </div>
         
         <canvas id="canvas"></canvas>

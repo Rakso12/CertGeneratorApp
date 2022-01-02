@@ -5,31 +5,119 @@ body{
 
     background-image: url("background.svg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-
+    background-position: top;
+    width: 100%;
+    height: 100%;
     text-align: center;
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+}
+
+.navlogo{
+    float: left;
+    padding: 14px 16px;
+}
+
+.navbar .logo{
+    height: auto;
+    max-height: 40px;
+}
+
+.navcontent{
+    float: right;
+    display: block;
+    
+    height: 18px;
+    padding: 28px 40px;
+
+    font-family: 'Lato';
+    font-style: italic;
+    font-size: large;
+}
+
+.navcontent:hover{
+    animation: navbarHover 1s forwards;
+}
+
+@keyframes navbarHover{
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: #8C9CC4;
+    }
+}
+
+.navcontent{
+    color: #4B4F8A;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navcontent img{
+    height: 40px;
+    margin-top: -10px;
 }
 
 /* generate button */
 
-#generate-btn{
-    color: white;
-    padding: 20px;
-    background-image: linear-gradient(45deg, #6E79A9 0%, #B8CFE6  100%);
-    border-radius: 74% 26% 50% 50% / 54% 48% 52% 46%;
-    border: 1px white;
-    margin: 20px;
-    width: 60%;
-    height: 70px;
-    font-size: 1.5em;
+.btn-5 {
+    text-align: center;
+    margin: auto;
+    position:relative;
+    overflow:hidden;
+    background: #BFD7EB;
+    width: 30%;
+
+    padding: 15px 40px;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    cursor: pointer;
 }
 
-#generate-btn:hover{
-    color: white;
-    padding: 20px;
-    background-image: linear-gradient(45deg, #8B9BC1 0%, #C7E1F3 100%);
-    border-radius: 74% 26% 50% 50% / 54% 48% 52% 46%;
-    border: 1px white;
+.btn-5:before {
+    content: "";
+    position: absolute;
+    background : #4B4F8A;
+    left: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 0;
+
+    transition: all 0.3s;
+    opacity: 0.3;
+}
+
+.btn-5:hover:before {
+    width: 100%;
+}   
+
+.btn-margin{
+    margin: 2% auto;
+}
+
+.top-margin{
+    margin-top: 10%;
+}
+
+.small-top-margin{
+    margin-top: 2%;
 }
 
 /* Input file */
@@ -42,22 +130,6 @@ label{
     display: block;
 }
 
-.file-upload {
-    border: 1px solid #ccc;    
-    border-radius: 16px;
-    display: inline-block;
-    padding: 16px 60px;
-    cursor: pointer;
-    margin: 14px;
-    font-size: 0.9em;
-    color: white;
-    background-image: linear-gradient(45deg, #6E79A9 0%, #B8CFE6  100%);
-}
-
-.file-upload:hover{
-    background-image: linear-gradient(45deg, #8B9BC1 0%, #C7E1F3 100%);
-}
-
 /* Form box */
 
 .form{
@@ -65,30 +137,30 @@ label{
     margin-left: auto;
     margin-right: auto;
 
-    padding: 20px;
+    padding: 10px 0px 50px 0px;
     width: 34%;
     height: auto;
     
-    border: 1px solid black;
-    border-radius: 10px;
+    box-shadow: 0 4px 8px 4px rgba(0,0,0,0.2);
+    border-radius: 5px;
 
     background-color: white;
-}
-
-.form-content{
-    margin-top: 8%;
 }
 
 /* Other */
 
 h1{
-    font-size: 3em;
+    font-size: 2em;
     margin-top: 8%;
 }
 
 p{
-    font-size: 1.4em;
+    font-size: 1em;
     margin-top: 6%;
+}
+
+a{
+    text-decoration: none;
 }
 
 .text-style{
@@ -100,4 +172,3 @@ p{
 canvas{
     display: none;
 }
-
