@@ -2,19 +2,19 @@
 
 It's **Certificate Generator**. If you want to make a lot of certificates in a few clicks, you can use this site application.
 
-![Array photo](https://github.com/Rakso12/CertGeneratorApp/tree/main/documentation/demo.png)
+![Array photo](https://github.com/Rakso12/CertGeneratorApp/blob/main/documentation/demo.png)
 
 ## Supported Extensions
 
 #### Image of certificate
 This app supported extension like .png, .jpg, .jpeg etc.
 
-![Array photo](https://github.com/Rakso12/CertGeneratorApp/tree/main/documentation/certificate.png)
+![Array photo](https://github.com/Rakso12/CertGeneratorApp/blob/main/documentation/certificate.png)
 
 #### List of course participants
 This app supported extension like .xlsx and other Standard Excel extensions.
  
-![Array photo](https://github.com/Rakso12/CertGeneratorApp/tree/main/documentation/List.png)
+![Array photo](https://github.com/Rakso12/CertGeneratorApp/blob/main/documentation/List.png)
 
 ### How to use
 1. Download app.
