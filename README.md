@@ -17,7 +17,7 @@ This app supported extension like .xlsx and other Standard Excel extensions.
 ![Array photo](https://github.com/Rakso12/CertGeneratorApp/blob/main/documentation/List.png)
 
 ### How to use
-1. Download app.
+1. Open app on [GitHub Pages](https://rakso12.github.io/CertGeneratorApp/)
 2. Upload image of your certificate theme.
 3. Upload list of course participants.
 4. Click "Create" button to create one certificate.
